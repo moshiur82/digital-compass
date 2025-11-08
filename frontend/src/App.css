@@ -1,0 +1,131 @@
+/* frontend/src/App.css */
+.App {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.error {
+  background: #e74c3c;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px auto;
+  max-width: 90%;
+}
+
+.compass-container {
+  margin: 40px auto;
+  max-width: 300px;
+}
+
+.compass {
+  width: 240px;
+  height: 240px;
+  border: 12px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  position: relative;
+  background: conic-gradient(
+    #e74c3c 0deg, #e74c3c 90deg,
+    #f39c12 90deg, #f39c12 180deg,
+    #27ae60 180deg, #27ae60 270deg,
+    #2980b9 270deg, #2980b9 360deg
+  );
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+  to { box-shadow: 0 10px 40px rgba(102, 126, 234, 0.6); }
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.arrow {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 15px black;
+  z-index: 10;
+}
+
+.info {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  padding: 18px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: inline-block;
+  min-width: 280px;
+}
+
+.info p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.info strong {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.history {
+  margin: 40px auto;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 400px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.history h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history li {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.history li:last-child {
+  border-bottom: none;
+}
+
+.history small {
+  color: #ddd;
+  font-size: 0.85rem;
+}
