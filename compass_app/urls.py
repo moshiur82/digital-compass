@@ -1,0 +1,11 @@
+# compass_app/urls.py
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from . import views
+
+router = DefaultRouter()
+router.register(r'readings', views.CompassReadingViewSet)
+
+urlpatterns = [
+    path('', include(router.urls)),
+]
